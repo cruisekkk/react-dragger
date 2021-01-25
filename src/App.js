@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { Row, Col, Divider } from 'antd';
+import ToolKit from './Main/Toolkit'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Divider orientation="left">ToolKit</Divider>
+      <ToolKit style={{height: 200, marginDown: 100}}/>
+      <Row gutter={16}>
+        <Col className="gutter-row" span={6}>
+          <div >col-6</div>
+        </Col>
+        <Col className="gutter-row" span={12}>
+          <div >col-6</div>
+        </Col>
+        <Col className="gutter-row" span={6}>
+          <div >col-6</div>
+        </Col>
+      </Row>
     </div>
   );
 }
